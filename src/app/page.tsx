@@ -2,10 +2,10 @@
 'use client';
 
 import React, { useRef, FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
+//import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
-  const router = useRouter();
+  // const router = useRouter();
   const hiddenFormRef = useRef<HTMLFormElement>(null);
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
