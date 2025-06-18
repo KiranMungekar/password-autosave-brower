@@ -26,7 +26,7 @@ export default function LoginPage() {
       }
       hiddenForm.submit();
 
-      setTimeout(() => router.push('/dashboard'), 100);
+      // setTimeout(() => router.push('/dashboard'), 100);
     } else {
       alert('Invalid credentials');
     }
