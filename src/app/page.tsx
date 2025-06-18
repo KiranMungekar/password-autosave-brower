@@ -15,14 +15,7 @@ export default function LoginPage() {
     const formData = new FormData(form);
     const username = formData.get('username') as string;
     const password = formData.get('password') as string;
-
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
-      body: JSON.stringify({ username, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (res.ok && hiddenFormRef.current) {
+    if (hiddenFormRef.current) {
       const hiddenForm = hiddenFormRef.current;
 
       const usernameInput = hiddenForm.elements.namedItem('username') as HTMLInputElement | null
@@ -50,7 +43,7 @@ export default function LoginPage() {
       {/* Hidden form to trigger password manager */}
       <form
         ref={hiddenFormRef}
-        action="/password-manager-dummy"
+        action="/dashboard"
         method="POST"
         style={{ display: 'none' }}
       >
